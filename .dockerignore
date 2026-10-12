@@ -1,0 +1,14 @@
+node_modules
+dist
+.git
+.vite
+*.bak
+*.log
+.DS_Store
+
+# 계획 파일은 이미지에 넣지 않는다. 실행할 때 볼륨으로 마운트해서 쓴다.
+plan-*.md
+
+# 화면 목록 생성 스크립트의 입력 자료(빌드에는 필요 없음)
+data
+scripts

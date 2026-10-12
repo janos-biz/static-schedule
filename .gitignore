@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.vite/
+
+# 저장 시 자동 생성되는 백업본
+*.bak
+
+# 편집 비밀번호. .env.example 만 올린다
+.env
+
+.DS_Store
+*.log
+
+# OMO task transcripts are ephemeral; retain only durable snapshots explicitly.
+.omo/senpi-task/

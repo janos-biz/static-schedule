@@ -1,0 +1,17 @@
+services:
+  static-schedule:
+    build: .
+    image: static-schedule
+    container_name: static-schedule
+    restart: unless-stopped
+    ports:
+      - "5180:5180"
+    environment:
+      # 완료 시각·릴리즈 이력이 한국 시간으로 기록되도록.
+      TZ: Asia/Seoul
+      PLAN_DIR: /data
+      PORT: "5180"
+    volumes:
+      # 이 docker-compose.yml 이 있는 폴더의 plan-*.md 를 그대로 읽고 쓴다.
+      # (저장 직전 백업 plan-*.md.bak 도 같은 폴더에 만들어진다)
+      - ./:/data
